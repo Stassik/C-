@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\Обучение\\Разработчик\\С#\\Examples\\Examples.csproj": {}
+    "C:\\Users\\HP\\Desktop\\Обучение\\Разработчик\\С#\\Examples\\Example001\\Example001.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\Обучение\\Разработчик\\С#\\Examples\\Examples.csproj": {
+    "C:\\Users\\HP\\Desktop\\Обучение\\Разработчик\\С#\\Examples\\Example001\\Example001.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Обучение\\Разработчик\\С#\\Examples\\Examples.csproj",
-        "projectName": "Examples",
-        "projectPath": "C:\\Users\\HP\\Desktop\\Обучение\\Разработчик\\С#\\Examples\\Examples.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Обучение\\Разработчик\\С#\\Examples\\Example001\\Example001.csproj",
+        "projectName": "Example001",
+        "projectPath": "C:\\Users\\HP\\Desktop\\Обучение\\Разработчик\\С#\\Examples\\Example001\\Example001.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\Обучение\\Разработчик\\С#\\Examples\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\Обучение\\Разработчик\\С#\\Examples\\Example001\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"
