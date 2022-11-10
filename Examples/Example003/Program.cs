@@ -17,4 +17,4 @@ Console.WriteLine("Введите числитель.");
 double firstNumberDel = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите знаменатель.");
 double secondNumberDel = int.Parse(Console.ReadLine());
-Console.WriteLine("Частное чисел равна " + (firstNumberDel / secondNumberDel));
+Console.WriteLine("Частное двух чисел равна " + (firstNumberDel / secondNumberDel));
