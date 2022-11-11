@@ -8,7 +8,11 @@ Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int count = -number;
 
-while (count <= number) {
-    Console.Write($"{count} ");
-    count++;
-}
+if (number >=0) {
+    while (count <= number) {
+        Console.Write($"{count} ");
+        count++;
+    }
+} else {
+    Console.WriteLine("Не корректное значение");
+};
