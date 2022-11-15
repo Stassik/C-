@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿//     Напишите программу, которая:
+// 1. принимает на вход число 
+// 2. проверяет, кратно ли оно одновременно 7 и 23.
+
+// 14 -> нет
+// 46 -> нет
+// 161 -> да
+
