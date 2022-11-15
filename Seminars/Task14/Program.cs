@@ -6,3 +6,14 @@
 // 46 -> нет
 // 161 -> да
 
+Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+bool Multiplicity(int num) 
+{
+    if ((num % 7 == 0)&& (num % 23 == 0)) return true;
+    return false;
+}
+
+bool result = Multiplicity(number);
+Console.WriteLine(result ? $"Число {number} кратно и 7 и 23" : $"Условие не выполняется.");
