@@ -13,7 +13,7 @@ int number2 = Convert.ToInt32 (Console.ReadLine());
 Console.Write("Введите третье число: ");
 int number3 = Convert.ToInt32 (Console.ReadLine());
 
-if ((number1 == number2) & (number2 == number3)) { //Если все числа равны
+if ((number1 == number2) && (number2 == number3)) { //Если все числа равны
     Console.WriteLine("Числа равны!");
 } else {
 
