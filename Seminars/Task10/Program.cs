@@ -19,13 +19,11 @@ int NumberModification(int num)
 
 if (((number > 99)&&(number < 1000))) 
     {
-        int numResult = NumberModification(number);
-        Console.WriteLine($"Вторая цифра трехзначного числа --> {numResult}"); 
+        Console.WriteLine($"Вторая цифра трехзначного числа --> {NumberModification(number)}"); 
     }
 else if ((number > -1000)&&(number < -99)) 
     {
-        int numResult = NumberModification(number) * (-1);
-        Console.WriteLine($"Вторая цифра трехзначного числа --> {numResult}"); 
+        Console.WriteLine($"Вторая цифра трехзначного числа --> {NumberModification(number) * (-1)}"); 
     }
 else 
     {
