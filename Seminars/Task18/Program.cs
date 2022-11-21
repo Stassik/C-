@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Напишите программу, которая:
+// 1. по заданному номеру четверти, показывает диапазон
+// возможных координат точек в этой четверти (x и y).
+
