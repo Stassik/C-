@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Напишите программу, которая:
+// 1. принимает на вход число (N) 
+// 2. выдаёт таблицу квадратов чисел от 1 до N.
+
+// 5 -> 1, 4, 9, 16, 25.
+// 2 -> 1,4
