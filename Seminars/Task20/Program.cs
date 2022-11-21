@@ -1,2 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Напишите программу, которая:
+// 1. принимает на вход координаты двух точек 
+// 2. находит расстояние между ними в 2D
+// пространстве.
+
+// A (3,6); B (2,1) -> 5,09
+// A (7,-5); B (1,-1) -> 7,21
+
+
+
+// int n = 12345;
+// double res = Math.Sqrt(n);
+
+// double n1 = 5.099985645;
+// double nRound = Math.Round(n1, 2, MidpointRounding.ToZero);
