@@ -104,3 +104,80 @@ array[0] = 12;                             // Задаем значение эл
 
 int n = array.Length;                      // Определяем длинну массива
 ```
+# Лекция 3. Функции: продолжение
+## Виды функций (методов)
+1. Ничего не принимают и ничего не возвращают
+```C#
+void Method1()
+{
+    Console.WriteLine("Автор...");
+}
+Method1();
+```
+2. Что-то принимают и ничего не возвращают;
+```C#
+                                //Первый вариант
+void Method2(string msg)
+{
+    Console.WriteLine(msg);
+}
+Method2("Автор ...");
+
+                                //Второй вариант
+void Method21(string msg, int count)
+{
+    int i = 0;
+    while (i < count>)
+    {
+        Console.WriteLine(msg);
+        i++;
+    }
+}
+Method21(msg: "Автор ...", count: 4);
+```
+3. Ничего не принимают и что-то возвращают;
+```C#
+int Method3()
+{
+    return DateTime.Now.Year;
+}
+int year = Method3();
+Console.WriteLine(year);
+```
+4. Что-то принимают и что-то возвращают.
+```C#
+string Method4(int count, string c)
+{
+    int i = 0;
+    string result = String.Empty;
+    while (i < count)
+    {
+        result = result + c;
+        i++;
+    }
+    return result;
+}
+string res = Method4(10, "Автор ...");
+Console.WriteLine(res);
+```
+## Цикл `for`
+```C#
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine(i);
+}
+```
+>Возможно использовать цикл в цикле.
+```C#
+for(int i = 2; i <= 10; i++)
+{
+   for(int j = 2; j <= 10; j++)
+   {
+    Console.WriteLine($"{i} x {j} = {i*j}");
+   }
+   Console.WriteLine(); 
+}
+```
+
+
+
