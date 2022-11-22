@@ -15,8 +15,10 @@ string Replace(string text1, char oldValue, char newValue)
 
     for (int i = 0; i < length; i++)
     {
-        if (text[i] == oldValue) result = result + $"{newValue}";
-        else result = result + $"{text[i]}";
+        if (text1[i] == oldValue) 
+            result = result + $"{newValue}";
+        else 
+            result = result + $"{text1[i]}";
     }
     return result;
 }
