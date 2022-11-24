@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Напишите программу, которая:
+// 1. принимает на вход число
+// 2. выдаёт сумму цифр в числе.
+
+// 452 -> 11
+// 82 -> 10
+// 9012 -> 12
