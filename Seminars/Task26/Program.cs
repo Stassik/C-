@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Напишите программу, которая:
+// 1. принимает на вход число 
+// 2. выдаёт количество цифр в числе.
+
+// 456 -> 3
+// 78 -> 2
+// 89126 -> 5
