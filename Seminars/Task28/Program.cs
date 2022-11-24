@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Напишите программу, которая:
+// 1. принимает на вход число N
+// 2. выдаёт произведение чисел от 1 до N.
+
+// 4 -> 24
+// 5 -> 120
+
