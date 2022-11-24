@@ -15,9 +15,9 @@ string Replace(string text1, char oldValue, char newValue)
 
     for (int i = 0; i < length; i++)
     {
-        if (text1[i] == oldValue) 
+        if (text1[i] == oldValue)
             result = result + $"{newValue}";
-        else 
+        else
             result = result + $"{text1[i]}";
     }
     return result;
@@ -25,6 +25,40 @@ string Replace(string text1, char oldValue, char newValue)
 
 string newText = Replace(text, ' ', '|');
 Console.WriteLine(newText);
-Console.WriteLine(); 
+Console.WriteLine();
 newText = Replace(newText, 'к', 'К');
 Console.WriteLine(newText);
+
+
+int[] array = { 10, 4, 8, 7, 2, 3, 6, 4, 2, 5 };
+
+void PrintArray(int[] array1)
+{
+    int count = array1.Length;
+    for (int i = 0; i < count; i++)
+    {
+        Console.Write($"{array1[i]} ");
+    }
+    Console.WriteLine();
+}
+
+void SelectionSort(int[] array1)
+{
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+        int minPosition = i;
+
+        for (int j = i + 1; j < array.Length; j++)
+        {
+            if (array[j] < array[minPosition]) minPosition = j;
+        }
+
+        int temporary = array[i];
+        array[i] = array[minPosition];
+        array[minPosition] = temporary;
+    }
+}
+
+PrintArray(array);
+SelectionSort(array);
+PrintArray(array);
