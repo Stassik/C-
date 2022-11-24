@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Напишите цикл, который 
+// 1. принимает на вход два числа (A и B) 
+// 2. возводит число A в натуральную степень B.
+
+// 3, 5 -> 243 (3⁵)
+// 2, 4 -> 16
