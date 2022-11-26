@@ -32,20 +32,11 @@ void InverseArray(int[] arrInv)
     }
 }
 
-void PrintInverseArray(int[] arrInv)
-{
-    Console.Write("[");
-    for (int i = 0; i < arrInv.Length; i++)
-    {
-        if (i < arrInv.Length - 1) Console.Write($"{arrInv[i]}, ");
-        else Console.Write($"{arrInv[i]}");
-    }
-    Console.WriteLine("]");
-}
+
 
 
 
 int[] array = CreateArray(5, -9, 9);
 PrintArray(array);
 InverseArray(array);
-PrintInverseArray(array);
+PrintArray(array);
