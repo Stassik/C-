@@ -9,7 +9,7 @@ double[] CreateArray(int size)
     double[] array = new double[size];
     for (int i = 0; i < size; i++)
     {
-        array[i] = Math.Round(rnd.NextDouble(), 2, MidpointRounding.ToZero);
+        array[i] = Math.Round(rnd.NextDouble(), 1, MidpointRounding.ToZero);
     }
     return array;
 }
@@ -48,7 +48,7 @@ double FindMax(double[] array)
 double FindSub(double min, double max)
 {
     double sub = max - min;
-    return Math.Round(sub, 2, MidpointRounding.ToZero);
+    return Math.Round(sub, 1, MidpointRounding.ToZero);
 }
 
 Console.Write("Введите размер массива: ");
