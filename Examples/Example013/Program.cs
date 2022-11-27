@@ -10,12 +10,34 @@
 //     Console.WriteLine();
 // }
 
-int[,] matrix = new int[4, 4];
-for (int row = 0; row < matrix.GetLength(0); row++)
+
+
+void PrintArray(int[,] matr)
 {
-    for (int column = 0; column < matrix.GetLength(1); column++)
+    for (int row = 0; row < matr.GetLength(0); row++)
     {
-        Console.Write($"{matrix[row, column]} ");
+        for (int column = 0; column < matr.GetLength(1); column++)
+        {
+            Console.Write($"{matr[row, column]} ");
+        }
+        Console.WriteLine();
     }
-    Console.WriteLine();
 }
+
+void FillArray( int[,] matr)
+{
+    Random rnd = new Random();
+   for (int row = 0; row < matr.GetLength(0); row++)
+    {
+        for (int column = 0; column < matr.GetLength(1); column++)
+        {
+            matr[row, column] = rnd.Next(1, 100);
+        }
+    } 
+}
+
+int[,] matrix = new int[4, 4];
+PrintArray(matrix);
+FillArray(matrix);
+PrintArray(matrix);
+
