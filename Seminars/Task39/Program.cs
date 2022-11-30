@@ -27,19 +27,17 @@ void PrintArray (int[] arr)
     Console.WriteLine("]");
 }
 
-int[] NewArray (int[] arr)
+void NewArray (int[] arr)
 {
     for (int i =0; i < arr.Length/2; i++)
     {
         int temp = arr[i];
         arr[i] = arr[arr.Length - 1 - i];
         arr[arr.Length - 1 - i] = temp;
-    }
-    return arr;
+    };
 }
 
 int[] array = CreateArray(6, 1, 10);
 PrintArray(array);
-
-int[] newArray = NewArray(array);
-PrintArray(newArray);
+NewArray(array);
+PrintArray(array);
