@@ -11,7 +11,6 @@ int num = Convert.ToInt32(Console.ReadLine());
 int[] CreateFibonacciArray (int numb)
 {
    int[] arr = new int[numb];
-   arr[0] = 0;
    arr[1] = 1;
    for (int i = 2; i < arr.Length; i++)
    {
