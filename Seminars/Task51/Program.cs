@@ -24,7 +24,7 @@ void PrintArray(int[,] arr, int m, int n)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            Console.Write($"{arr[i, j]} ");
+            Console.Write($"{arr[i, j], 4}");
         }
         Console.WriteLine();
     }
