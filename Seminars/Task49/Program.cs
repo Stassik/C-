@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Задайте двумерный массив. 
+// Найдите элементы, у которых оба индекса чётные, 
+// и замените эти элементы на их
+// квадраты.
