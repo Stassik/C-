@@ -20,7 +20,7 @@ double[,] CreateArray (int m, int n)
     }
     return arr;
 }
-void PrintArray (double[,] arr, int m, int n)
+void PrintArray (double[,] arr)
 {
     for (int i = 0; i < arr.GetLength(0); i++)
     {
@@ -39,7 +39,7 @@ int col = Convert.ToInt32(Console.ReadLine());
 if (row > 0 && col >0)
 {
     double[,] array = CreateArray(row, col);
-    PrintArray(array, row, col);
+    PrintArray(array);
 }
 else if (row == 0 || col == 0)
 {
