@@ -31,6 +31,31 @@ void PrintArray(int[,] arr)
     }
 }
 
+void PrintNewArray(double[] newArr)
+{
+    Console.Write("[");
+    for (int i = 0; i < newArr.Length; i++)
+    {
+        if (i < newArr.Length - 1) Console.Write($"{newArr[i]}; ");
+        else Console.Write($"{newArr[i]}");
+    }
+    Console.WriteLine("]");
+}
+
+double[] ArithmeticMean(int[,] arr)
+{
+    double[] newArr = new double[arr.GetLength(1)];
+    for (int j = 0; j < arr.GetLength(1); j++)
+    {
+        double jArr = 0;
+        for (int i = 0; i < arr.GetLength(0); i++)
+        {
+            jArr += arr[i, j];
+        }
+        newArr[j] = Math.Round(jArr / arr.GetLength(0), 1, MidpointRounding.ToZero);
+    }
+    return newArr;
+}
 
 
 Console.Write("Введите количество строк в массиве: ");
@@ -42,6 +67,9 @@ if (row > 0 && col > 0)
 {
     int[,] array = CreateArray(row, col);
     PrintArray(array);
+    Console.WriteLine();
+    double[] newArray = ArithmeticMean(array);
+    PrintNewArray(newArray);
 }
 else if (row == 0 || col == 0)
 {
