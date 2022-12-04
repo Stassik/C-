@@ -47,12 +47,12 @@ double[] ArithmeticMean(int[,] arr)
     double[] newArr = new double[arr.GetLength(1)];
     for (int j = 0; j < arr.GetLength(1); j++)
     {
-        double jArr = 0;
+        double arithmetic = 0;
         for (int i = 0; i < arr.GetLength(0); i++)
         {
-            jArr += arr[i, j];
+            arithmetic += arr[i, j];
         }
-        newArr[j] = Math.Round(jArr / arr.GetLength(0), 1, MidpointRounding.ToZero);
+        newArr[j] = Math.Round(arithmetic / arr.GetLength(0), 1, MidpointRounding.ToZero);
     }
     return newArr;
 }
