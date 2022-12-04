@@ -20,7 +20,7 @@ int[,] CreateArray(int m, int n)
     }
     return arr;
 }
-void PrintArray(int[,] arr, int m, int n)
+void PrintArray(int[,] arr)
 {
     for (int i = 0; i < arr.GetLength(0); i++)
     {
@@ -51,7 +51,7 @@ int colIndex = Convert.ToInt32(Console.ReadLine());
 if (row > 0 && col > 0 && rowIndex > 0 && colIndex > 0)
 {
     int[,] array = CreateArray(row, col);
-    PrintArray(array, row, col);
+    PrintArray(array);
     bool result = CheckIndexPosition(array, rowIndex, colIndex);
     Console.WriteLine(result ? array[rowIndex, colIndex] : "Такого элемента не существует.");
 }
