@@ -47,7 +47,7 @@ void ReposMatrix(int[,] matrix)
 
 // int[,] ReposMatrix(int[,] matrix)
 // {
-//     int[,] matrix2 = new int[matrix.GetLength(0), matrix.GetLength(1)];
+//     int[,] matrix2 = new int[matrix.GetLength(1), matrix.GetLength(0)];
 //     for (int j = 0; j < matrix.GetLength(1); j++)
 //     {
        
