@@ -1,2 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Задайте двумерный массив. 
+// Напишите программу, которая поменяет местами первую и последнюю строку
+// массива.
