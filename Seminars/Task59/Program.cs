@@ -28,11 +28,11 @@ void PrintArray(int[,] matrix)
     }
 }
 
-int FindMinRowElement(int[,] matrix)
+void FindMinElement(int[,] matrix, out int minRow, out int minCol)
 {
     int min = matrix[0, 0];
-    int minRow = 0;
-    int minCol = 0;
+    minRow = 0;
+    minCol = 0;
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
@@ -45,46 +45,21 @@ int FindMinRowElement(int[,] matrix)
             }
         }
     }
-    return minRow;
-    // Console.WriteLine($"Минимальное число в матрице {min}. Его позиция ({minRow}, {minCol}).");
-}
-
-int FindMinColElement(int[,] matrix)
-{
-    int min = matrix[0, 0];
-    int minRow = 0;
-    int minCol = 0;
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if (matrix[i, j] < min)
-            {
-                min = matrix[i, j];
-                minRow = i;
-                minCol = j;
-            }
-        }
-    }
-    return minCol;
-    // Console.WriteLine($"Минимальное число в матрице {min}. Его позиция ({minRow}, {minCol}).");
 }
 
 int[,] CorrectMatrix(int[,] matrix, int minRow, int minCol)
 {
-    int[,] matrixCorrect = new int[matrix.GetLength(0), matrix.GetLength(1)];
-    for (int i = 0; i < matrixCorrect.GetLength(0); i++)
+    int[,] matrixCorrect = new int[matrix.GetLength(0) - 1, matrix.GetLength(1) - 1];
+       
+    for (int i = 0, r = 0; i < matrixCorrect.GetLength(0); i++, r++)
     {
-        if (i != minRow)
+
+        if (r == minRow) r++;
+        for (int j = 0, c = 0; j < matrixCorrect.GetLength(1); j++, c++)
         {
-            for (int j = 0; j < matrixCorrect.GetLength(1); j++)
-            {
-                if (j != minCol)
-                {
-                    matrixCorrect[i, j] = matrix[i, j];
-                }
-            }
-        }
+            if (c == minCol) c++;            
+            matrixCorrect[i, j] = matrix[r, c];             
+        }  
     }
     return matrixCorrect;
 }
@@ -100,8 +75,8 @@ else
     int[,] matrixArray = CreateMatrix(rowNum, colNum);
     PrintArray(matrixArray);
     Console.WriteLine();
-    int row = FindMinRowElement(matrixArray);
-    int col = FindMinColElement(matrixArray);
+    int row, col;
+    FindMinElement(matrixArray, out row, out col);
     int[,] correct = CorrectMatrix(matrixArray, row, col);
     PrintArray(correct);
 
