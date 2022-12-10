@@ -14,49 +14,52 @@ int[,] CreateMatrix(int row, int col)
     int colLength = matrix.GetLength(1);
     int i = 0;
     int j = 0;
+    int temp = 0;
 
-    for (int temp = 0; temp < rowLength/2; temp++)
+    while (temp <= matrix.GetLength(0)/2)
     {
-        Console.WriteLine(temp);
-
-        for (i = 0 + temp; i < rowLength; i++)
+        for (i = temp; i < rowLength; i++)
         {
-            
-            for (j = temp; j < matrix.GetLength(1); j++)
+            for (j = temp; j < matrix.GetLength(1) - temp; j++)
             {
-
                 matrix[i, j] = num;
                 num++;
-
-                if ((j == colLength - 1 - temp))
+                if ((j == colLength -1))
                 {
-                    for (i++; i < rowLength; i++)
+                    for (i++; i < rowLength ; i++)
                     {
                         matrix[i, j] = num;
                         num++;
                     }
-                    colLength--;
+                    colLength--;;
                 }
             }
         }
-        for (i = rowLength - 1 - temp; i > rowLength - i; i--)
+        for (i = rowLength - temp-1; i > rowLength - i; i--)
         {
             for (j = colLength - 1 - temp; j >= 0; j--)
             {
+                Console.WriteLine($"J- {j}");
                 matrix[i, j] = num;
                 num++;
                 rowLength--;
-                if ((j == 0))
+                
+                if ((j == temp))
                 {
-                    for (i--; i > rowLength - i; i--)
+                    for (i--; i >= rowLength - i; i--)
                     {
+                        Console.WriteLine($"I- {i}");
                         matrix[i, j] = num;
                         num++;
                     }
-
                 }
+                
             }
         }
+        temp++;
+        rowLength = matrix.GetLength(0) - temp;
+        colLength = matrix.GetLength(1) - temp;
+        Console.WriteLine($"TEMP- {temp}");
     }
     return matrix;
 }
