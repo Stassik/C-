@@ -14,40 +14,84 @@ int[,] CreateMatrix(int rowNum, int colNum)
     int step = 1;
     int num = 1;
     int cycles = 0;
-    if(rowLength % 2 == 0)
-        cycles = rowLength/2;
+    if (colLength > rowLength)
+    {
+        if (colLength % 2 == 0)
+            cycles = colLength / 2+1;
+        else
+            cycles = colLength / 2+2;
+    }
     else
-        cycles = rowLength/2+1;
+    {
+        if (rowLength % 2 == 0)
+            cycles = rowLength / 2+1;
+        else
+            cycles = rowLength / 2+2;
+    }
+
 
     while (step <= cycles)
-    {     
-        for (int j = step-1; j < colLength - step; j++)
+    {
+
+        for (int j = step - 1; j < colLength - step; j++)
         {
-            int row = step-1;
+            int row = step - 1;
             matrix[row, j] = num;
             num++;
         }
-        for (int i = step-1; i < rowLength - step; i++)
+        for (int i = step - 1; i < rowLength - step; i++)
         {
-            int col = colLength- step;
+            int col = colLength - step;
             matrix[i, col] = num;
             num++;
         }
 
-        for (int k = colLength - step; k > step-1; k--)
+        for (int k = colLength - step; k > step - 1; k--)
         {
             int rowRev = rowLength - step;
             matrix[rowRev, k] = num;
             num++;
         }
 
-        for (int m = rowLength - step; m > step-1; m--)
+        for (int m = rowLength - step; m > step - 1; m--)
         {
-            int colRev = step-1;
+            int colRev = step - 1;
             matrix[m, colRev] = num;
             num++;
         }
         step++;
+
+        if (step == cycles)
+        {
+            step++;
+            for (int j = step - 1; j <= colLength - step; j++)
+            {
+                int row = step - 1;
+                matrix[row, j] = num;
+                num++;
+            }
+            for (int i = step - 1; i < rowLength - step; i++)
+            {
+                int col = colLength - step;
+                matrix[i, col] = num;
+                num++;
+            }
+
+            for (int k = colLength - step; k > step - 1; k--)
+            {
+                int rowRev = rowLength - step;
+                matrix[rowRev, k] = num;
+                num++;
+            }
+
+            for (int m = rowLength - step; m > step - 1; m--)
+            {
+                int colRev = step - 1;
+                matrix[m, colRev] = num;
+                num++;
+            }
+            break;
+        }
     }
     return matrix;
 }
