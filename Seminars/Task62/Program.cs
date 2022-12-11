@@ -11,7 +11,7 @@ int[,] CreateMatrix(int rowNum, int colNum)
     int[,] matrix = new int[rowNum, colNum];
     int colLength = matrix.GetLength(1);
     int rowLength = matrix.GetLength(0);
-    int step = 0;
+    int step = 1;
     int num = 1;
     int cycles = 0;
     if(rowLength % 2 == 0)
@@ -21,29 +21,29 @@ int[,] CreateMatrix(int rowNum, int colNum)
 
     while (step <= cycles)
     {     
-        for (int j = step; j < colLength - step - 1; j++)
+        for (int j = step-1; j < colLength - step; j++)
         {
-            int row = step;
+            int row = step-1;
             matrix[row, j] = num;
             num++;
         }
-        for (int i = step; i < rowLength - step - 1; i++)
+        for (int i = step-1; i < rowLength - step; i++)
         {
-            int col = colLength- step -1;
+            int col = colLength- step;
             matrix[i, col] = num;
             num++;
         }
 
-        for (int k = colLength - step - 1; k > step; k--)
+        for (int k = colLength - step; k > step-1; k--)
         {
-            int rowRev = rowLength - step - 1;
+            int rowRev = rowLength - step;
             matrix[rowRev, k] = num;
             num++;
         }
 
-        for (int m = rowLength - step - 1; m > step; m--)
+        for (int m = rowLength - step; m > step-1; m--)
         {
-            int colRev = step;
+            int colRev = step-1;
             matrix[m, colRev] = num;
             num++;
         }
