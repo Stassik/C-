@@ -6,95 +6,49 @@
 // 11 16 15 06
 // 10 09 08 07
 
-int[,] CreateMatrix(int row, int col)
+int[,] CreateMatrix(int rowNum, int colNum)
 {
-    int[,] matrix = new int[row, col];
+    int[,] matrix = new int[rowNum, colNum];
+    int colLength = matrix.GetLength(1);
+    int rowLength = matrix.GetLength(0);
     int step = 0;
-    int cols = matrix.GetLength(1);
-    int rows = matrix.GetLength(0);
-    int pos = 1;
+    int num = 1;
     int cycles = 0;
-    if(rows % 2 == 0)
-        cycles = rows/2;
+    if(rowLength % 2 == 0)
+        cycles = rowLength/2;
     else
-        cycles = rows/2+1;
+        cycles = rowLength/2+1;
 
-    while (step < cycles)
-    {
-        for (int i = step; i < cols - step; i++)
-            matrix[step, i] = pos++;          
-
-        for (int j = step+1; j < rows - step; j++)
+    while (step <= cycles)
+    {     
+        for (int j = step; j < colLength - step - 1; j++)
         {
-            int a = rows - 1 - step;
-            matrix[j, a] = pos++;
-            
+            int row = step;
+            matrix[row, j] = num;
+            num++;
+        }
+        for (int i = step; i < rowLength - step - 1; i++)
+        {
+            int col = colLength- step -1;
+            matrix[i, col] = num;
+            num++;
         }
 
-        for (int k = cols-step-2; k >= step; k--)
+        for (int k = colLength - step - 1; k > step; k--)
         {
-            int c = cols - 1 - step;
-            matrix[c, k] = pos++;
+            int rowRev = rowLength - step - 1;
+            matrix[rowRev, k] = num;
+            num++;
         }
 
-        for (int z = rows-step-2; z > step ; z--)
-            matrix[z,step] = pos++;
-
+        for (int m = rowLength - step - 1; m > step; m--)
+        {
+            int colRev = step;
+            matrix[m, colRev] = num;
+            num++;
+        }
         step++;
     }
-
-    // int num = 1;
-    // int rowLength = matrix.GetLength(0);
-    // int colLength = matrix.GetLength(1);
-    // int i = 0;
-    // int j = 0;
-    // int temp = 0;
-
-    // while (temp <= matrix.GetLength(0)/2)
-    // {
-    //     for (i = temp; i < rowLength; i++)
-    //     {
-    //         for (j = temp; j < matrix.GetLength(1) - temp; j++)
-    //         {
-    //             matrix[i, j] = num;
-    //             num++;
-    //             if ((j == colLength -1))
-    //             {
-    //                 for (i++; i < rowLength ; i++)
-    //                 {
-    //                     matrix[i, j] = num;
-    //                     num++;
-    //                 }
-    //                 colLength--;;
-    //             }
-    //         }
-    //     }
-    //     for (i = rowLength - temp-1; i > rowLength - i; i--)
-    //     {
-    //         for (j = colLength - 1 - temp; j >= 0; j--)
-    //         {
-    //             Console.WriteLine($"J- {j}");
-    //             matrix[i, j] = num;
-    //             num++;
-    //             rowLength--;
-                
-    //             if ((j == temp))
-    //             {
-    //                 for (i--; i >= rowLength - i; i--)
-    //                 {
-    //                     Console.WriteLine($"I- {i}");
-    //                     matrix[i, j] = num;
-    //                     num++;
-    //                 }
-    //             }
-                
-    //         }
-    //     }
-    //     temp++;
-    //     rowLength = matrix.GetLength(0) - temp;
-    //     colLength = matrix.GetLength(1) - temp;
-    //     Console.WriteLine($"TEMP- {temp}");
-    // }
     return matrix;
 }
 
