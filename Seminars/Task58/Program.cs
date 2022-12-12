@@ -73,4 +73,8 @@ if (colA == rowB)
     int[,] matrixArray = MergeMatrix(matrixArrayA, matrixArrayB);
     PrintMatrix(matrixArray);
 }
-Console.WriteLine($"Перемножение матриц невозможно! Столбцы матрицы A должны быть равны строкам матрицы B");
+else 
+{
+    Console.WriteLine($"Перемножение матриц невозможно! Столбцы матрицы A должны быть равны строкам матрицы B");
+}
+
