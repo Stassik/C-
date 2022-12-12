@@ -8,18 +8,8 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 int SumNumbers(int num)
 {
-    int sum = 0;
-    int unit = 0;
-    while (num > 0)
-    {
-        unit = num % 10;
-        sum += unit;
-        num /= 10;
-        SumNumbers(num);
-    }
-
-    return sum;
+    if (num > 0) return num % 10 + SumNumbers(num / 10);
+    return 0;
 }
 
-int sumNumbers = SumNumbers(number);
-Console.Write(sumNumbers);
+Console.Write(SumNumbers(number));
