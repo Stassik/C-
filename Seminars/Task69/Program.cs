@@ -12,14 +12,9 @@ int stepNumber = Convert.ToInt32(Console.ReadLine());
 
 int NumberStep (int num, int step)
 {
-    int count = 1;
-    if (count <= step)
-    {
-        count++;
-        return num*NumberStep(num, step);
-        
-    }
-    return num;
+
+    if (step > 0) return num * NumberStep(num, step -1 );
+    return 1;
 }
 
 int newNumber = NumberStep(number, stepNumber);
