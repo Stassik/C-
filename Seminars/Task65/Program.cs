@@ -1,2 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Задайте значения M и N. 
+// Напишите программу, которая выведет все натуральные числа
+//  в промежутке от M до N.
